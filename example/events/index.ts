@@ -18,7 +18,7 @@ const main = async () => {
 
   let connection = new Connection(process.env.HELIUS_RPC_URL || "");
 
-  let wallet = new NodeWallet(new Keypair()); //note this is not used
+  let wallet = new NodeWallet(new Keypair()); 
   const provider = new AnchorProvider(connection, wallet, {
     commitment: "finalized",
   });
