@@ -41,7 +41,7 @@ Edit the metadata to define your token's properties:
 const metadata = {
   "name": "Alie",
   "symbol": "AAA",
-  "description": "Alie token",
+  "description": "AAA token",
   "image": "./upload/img.jpg",
   "showName": true,
   "createdOn": "https://pump.fun",
