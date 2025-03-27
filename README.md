@@ -43,14 +43,14 @@ Edit the metadata to define your token's properties:
 
 ```typescript
 const metadata = {
-  "name": "Alie",
-  "symbol": "AAA",
-  "description": "AAA token",
+  "name": "g0drlc",
+  "symbol": "G0DRLC",
+  "description": "this is g0drlc token",
   "image": "./upload/img.jpg",
   "showName": true,
   "createdOn": "https://pump.fun",
-  "twitter": "https://x.com/alie",
-  "telegram": "https://t.me/alie",
+  "twitter": "https://x.com/x80drlc",
+  "telegram": "https://t.me/g0drlc",
   "website": "https://alie"
 };
 ```
