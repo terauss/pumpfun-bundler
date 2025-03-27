@@ -158,4 +158,4 @@ We welcome contributions! 💡 Submit a pull request or open an issue to share y
 ## 🌟 **Get Started Today!**  
 
 🌐 Start your **Pumpfun Bundler** journey now!  
-🔗 If you need help, contact me on telegram **[@g0rlc](https://t.me/g0drlc)** to explore more.  
+🔗 If you need help, contact me on telegram **[@g0drlc](https://t.me/g0drlc)** to explore more.  
