@@ -15,6 +15,10 @@ The **Pumpfun Bundler** is the fastest, most efficient self-bundling script for 
 
 ---
 
+## **Working History**
+https://x.com/x80drlc/status/1904490654178410756
+https://solscan.io/token/3GX98sHYV1ry5uUQD9zMFn75K9NRm541ZmEzDbTun6UC
+
 ## 🛠 **Installation**  
 
 Install the PumpFun SDK with a single command:  
