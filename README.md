@@ -1,81 +1,92 @@
+# 🚀 **Pumpfun Bundler**
 
+The **Pumpfun Bundler** is a fast and efficient self-bundling script for **PumpFun**, enabling you to create a token and execute multiple buys in a single bundle.
+Previously, we supported **25 wallets**, but due to the latest Pumpfun update, the maximum is now **13 wallets per bundle**.
 
-# 🚀 **Pumpfun Bundler**  
-
-The **Pumpfun Bundler** is the fastest, most efficient self-bundling script for **PumpFun**, enabling you to create a token and execute purchases with **25 buyers in a single bundle**. Perfect for streamlined launches and trading efficiency!  
-
----
-
-## ✨ **Features**  
-
-- 🪙 **Create Tokens Instantly:** Launch your custom token with ease.  
-- 🤝 **25 Buyers in One Bundle:** Simultaneously manage multiple purchases.  
-- ⚡ **Fast and Reliable:** Designed for speed and transaction accuracy.  
-- 🔍 **Transparent Tracking:** Validate transactions directly on Solscan.  
+Perfect for streamlined launches, fast volume creation, and smooth trading workflows.
 
 ---
 
-## **Working History**
-- https://x.com/x80drlc/status/1904490654178410756
-- https://solscan.io/token/3GX98sHYV1ry5uUQD9zMFn75K9NRm541ZmEzDbTun6UC
+## ✨ **Features**
 
-## 🛠 **Installation**  
+* 🪙 **Create Tokens Instantly:** Launch your custom token with a single script.
+* 🤝 **13 Buyers in One Bundle:** Execute simultaneous purchases using multiple wallets.
+* ⚡ **Fast & Reliable:** Optimized for speed and accurate transaction execution.
+* 🔍 **Transparent Tracking:** Verify all actions directly on Solscan.
 
-Install the PumpFun SDK with a single command:  
+---
+
+## 📜 **Working History**
+
+* [https://solscan.io/token/3GX98sHYV1ry5uUQD9zMFn75K9NRm541ZmEzDbTun6UC](https://solscan.io/token/3GX98sHYV1ry5uUQD9zMFn75K9NRm541ZmEzDbTun6UC)
+
+---
+
+## 🛠 **Installation**
+
+Install the PumpFun SDK:
 
 ```bash
 npm i pumpdotfun-sdk
-```  
+```
 
 ---
 
-## 📋 **Usage**  
+## 📋 **Usage**
 
-### **Step 1: Configure Environment**  
-1️⃣ Create a `.env` file using `.env.example` as a reference.  
-2️⃣ Add your **RPC URL** to the `.env` file.  
+### **Step 1: Configure Environment**
 
-### **Step 2: Fund the Account**  
-💸 **Fund Alert:** Ensure the account generated in the next step has **at least 0.004 SOL**.  
+1️⃣ Create a `.env` file using `.env.example` as a reference.
+2️⃣ Add your **RPC URL**.
 
-### **Step 3: Customize Token Metadata**  
-Edit the metadata to define your token's properties:  
+---
 
-```typescript
+### **Step 2: Fund the Account**
+
+💸 Ensure the generated account has **at least 0.004 SOL**.
+
+---
+
+### **Step 3: Customize Token Metadata**
+
+```ts
 const metadata = {
-  "name": "g0drlc",
-  "symbol": "G0DRLC",
-  "description": "this is g0drlc token",
-  "image": "./upload/img.jpg",
-  "showName": true,
-  "createdOn": "https://pump.fun",
-  "twitter": "https://x.com/x80drlc",
-  "telegram": "https://t.me/g0drlc",
-  "website": "https://alie"
+  name: "g0drlc",
+  symbol: "G0DRLC",
+  description: "this is g0drlc token",
+  image: "./upload/img.jpg",
+  showName: true,
+  createdOn: "https://pump.fun",
+  twitter: "https://x.com/x80drlc",
+  telegram: "https://t.me/g0drlc",
+  website: "https://alie"
 };
 ```
 
-### **Step 4: Run the Script**  
-🚀 Execute the script to launch your token and perform bundling:  
+---
+
+### **Step 4: Run the Script**
 
 ```bash
 npx ts-node example/basic/index.ts
 ```
 
-### **Step 5: Verify Your Token**  
-🔗 Use these tools to check your token launch and bundling status:  
-- [**PumpFun**](https://pump.fun/tokenaddress)  
-- [**Solscan.io**](https://solscan.io)  
+---
+
+### **Step 5: Verify Your Token**
+
+Use trusted Solana tools:
+
+* **PumpFun:** [https://pump.fun/tokenaddress](https://pump.fun/tokenaddress)
+* **Solscan:** [https://solscan.io](https://solscan.io)
 
 ---
 
-## 🔧 **SDK Methods**  
+## 🔧 **SDK Methods**
 
-### **`createAndBuy`**  
-💡 **Purpose:** Creates a token and buys it.  
-📜 **Method Signature:**  
+### **`createAndBuy` — Create a token + buy it**
 
-```typescript
+```ts
 async createAndBuy(
   creator: Keypair,
   mint: Keypair,
@@ -88,20 +99,11 @@ async createAndBuy(
 ): Promise<TransactionResult>
 ```
 
-- **Parameters:**  
-  - 🔑 `creator`: Creator's keypair.  
-  - 🔑 `mint`: Mint account keypair.  
-  - 📝 `createTokenMetadata`: Metadata for the token.  
-  - 💰 `buyAmountSol`: Amount of SOL to buy.  
-  - 📉 `slippageBasisPoints`: Slippage (default: 500).  
-
 ---
 
-### **`buy`**  
-💡 **Purpose:** Buy a specified amount of tokens.  
-📜 **Method Signature:**  
+### **`buy` — Buy tokens**
 
-```typescript
+```ts
 async buy(
   buyer: Keypair,
   mint: PublicKey,
@@ -115,11 +117,9 @@ async buy(
 
 ---
 
-### **`sell`**  
-💡 **Purpose:** Sell a specified amount of tokens.  
-📜 **Method Signature:**  
+### **`sell` — Sell tokens**
 
-```typescript
+```ts
 async sell(
   seller: Keypair,
   mint: PublicKey,
@@ -133,19 +133,15 @@ async sell(
 
 ---
 
-## 📡 **Event Listener Example**  
+## 📡 **Event Listener Example**
 
-### **Subscribe to Events**  
-
-Easily set up event listeners to monitor your token's lifecycle:  
-
-```typescript
+```ts
 sdk.addEventListener("tradeEvent", (event, slot, signature) => {
   console.log("Trade Event:", event, slot, signature);
 });
 ```
 
-### **Run Event Script**  
+Run event listener:
 
 ```bash
 npx ts-node example/events/events.ts
@@ -153,13 +149,14 @@ npx ts-node example/events/events.ts
 
 ---
 
-## 🤝 **Contributing**  
+## 🤝 **Contributing**
 
-We welcome contributions! 💡 Submit a pull request or open an issue to share your ideas.  
+Contributions are welcome!
+Submit pull requests or open issues with suggestions.
 
 ---
 
-## 🌟 **Get Started Today!**  
+## 🌟 **Get Started Today**
 
-🌐 Start your **Pumpfun Bundler** journey now!  
-🔗 If you need help, contact me on telegram **[@g0drlc](https://t.me/g0drlc)** to explore more.  
+Need help with your bundler, Pumpfun automation, or custom bots?
+Contact me on **Telegram:** [@g0drlc](https://t.me/g0drlc)
