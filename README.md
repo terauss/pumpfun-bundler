@@ -51,15 +51,15 @@ npm i pumpdotfun-sdk
 
 ```ts
 const metadata = {
-  name: "g0drlc",
-  symbol: "G0DRLC",
-  description: "this is g0drlc token",
+  name: "teraus",
+  symbol: "TERAUS",
+  description: "this is teraus token",
   image: "./upload/img.jpg",
   showName: true,
   createdOn: "https://pump.fun",
-  twitter: "https://x.com/x80drlc",
-  telegram: "https://t.me/g0drlc",
-  website: "https://alie"
+  twitter: "https://x.com/x_teraus",
+  telegram: "https://t.me/terauss",
+  website: "https://teraus.org"
 };
 ```
 
@@ -159,4 +159,4 @@ Submit pull requests or open issues with suggestions.
 ## 🌟 **Get Started Today**
 
 Need help with your bundler, Pumpfun automation, or custom bots?
-Contact me on **Telegram:** [@g0drlc](https://t.me/g0drlc)
+Contact me on **Telegram:** [@terauss](https://t.me/terauss)
